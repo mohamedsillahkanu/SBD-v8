@@ -77,7 +77,7 @@
                                 <polyline points="21 15 16 10 5 21"/>
                             </svg>
                             <p class="photo-placeholder-text">DISTRIBUTION PHOTO</p>
-                            <p class="photo-placeholder-hint">Place <strong>distribution_photo.jpg</strong> here</p>
+                            <p class="photo-placeholder-hint">Place <strong>inforgraphics.png</strong> here</p>
                         </div>
                     </div>
                     <div class="photo-caption">
@@ -346,6 +346,58 @@
                                 <div>
                                     <h2 class="section-title">SECTION C: ENROLLMENT & ITN DISTRIBUTION</h2>
                                     <p class="section-description">Enter enrollment and ITN data for each class</p>
+                                </div>
+                            </div>
+
+                            <!-- ITN RECEIVED IN SCHOOL -->
+                            <div class="itn-received-block">
+                                <div class="itn-received-header">
+                                    <svg class="block-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+                                    </svg>
+                                    ITNs RECEIVED IN SCHOOL
+                                </div>
+                                <div class="itn-received-content">
+                                    <div class="form-group">
+                                        <label class="form-label">TOTAL NUMBER OF ITNs RECEIVED <span class="required">*</span></label>
+                                        <input type="number" class="form-input" name="itns_received" id="itns_received" min="0" value="0" required>
+                                        <div class="field-hint">Enter the total number of ITNs delivered to this school</div>
+                                        <div class="field-error" id="error_itns_received">This field is required</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">ITN TYPE(S) RECEIVED <span class="required">*</span></label>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" name="itn_type_pbo" id="itn_type_pbo" value="PBO" onchange="toggleITNTypeQuantity()">
+                                                <span class="checkbox-text">PBO (Piperonyl Butoxide)</span>
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" name="itn_type_ig2" id="itn_type_ig2" value="IG2" onchange="toggleITNTypeQuantity()">
+                                                <span class="checkbox-text">IG2 (Interceptor G2)</span>
+                                            </label>
+                                        </div>
+                                        <div class="field-error" id="error_itn_type">Please select at least one ITN type</div>
+                                    </div>
+
+                                    <div class="itn-quantity-fields" id="itn_quantity_fields" style="display: none;">
+                                        <div class="form-group" id="pbo_quantity_group" style="display: none;">
+                                            <label class="form-label">QUANTITY OF PBO ITNs <span class="required">*</span></label>
+                                            <input type="number" class="form-input itn-type-qty" name="itn_qty_pbo" id="itn_qty_pbo" min="0" value="0" oninput="validateITNQuantities()">
+                                            <div class="field-error" id="error_itn_qty_pbo">Enter PBO quantity</div>
+                                        </div>
+                                        <div class="form-group" id="ig2_quantity_group" style="display: none;">
+                                            <label class="form-label">QUANTITY OF IG2 ITNs <span class="required">*</span></label>
+                                            <input type="number" class="form-input itn-type-qty" name="itn_qty_ig2" id="itn_qty_ig2" min="0" value="0" oninput="validateITNQuantities()">
+                                            <div class="field-error" id="error_itn_qty_ig2">Enter IG2 quantity</div>
+                                        </div>
+                                        <div class="itn-quantity-total" id="itn_quantity_total">
+                                            <span class="qty-label">Total from types:</span>
+                                            <span class="qty-value" id="itn_type_total">0</span>
+                                            <span class="qty-status" id="itn_qty_status"></span>
+                                        </div>
+                                        <div class="field-error" id="error_itn_qty_mismatch" style="display: none;">ITN type quantities must equal total ITNs received</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -648,6 +700,12 @@
                                         <div class="dash-label">Total Pupils Received ITNs</div>
                                         <div class="dash-value" id="sum_total_itn">0</div>
                                         <input type="hidden" name="total_itn" id="total_itn" value="0">
+                                    </div>
+                                    <div class="dash-card large orange">
+                                        <div class="dash-label">ITNs Remaining (Received - Distributed)</div>
+                                        <div class="dash-value" id="itns_remaining">0</div>
+                                        <input type="hidden" name="itns_remaining" id="itns_remaining_val" value="0">
+                                        <div class="remaining-status" id="remaining_status"></div>
                                     </div>
                                 </div>
                             </div>
@@ -977,8 +1035,9 @@
                 </span>
             </div>
             <div class="modal-body">
-                <label class="form-label">DRAFT NAME:</label>
-                <input type="text" class="form-input" id="draftNameInput" placeholder="e.g., St. Joseph Primary - Bo">
+                <label class="form-label">DRAFT NAME (AUTO-GENERATED):</label>
+                <input type="text" class="form-input draft-name-readonly" id="draftNameInput" readonly>
+                <div class="draft-name-hint">Name is auto-generated from location selections</div>
                 <div class="modal-buttons">
                     <button class="modal-btn cancel" onclick="cancelDraftName()">CANCEL</button>
                     <button class="modal-btn save" onclick="confirmSaveDraft()">SAVE</button>
