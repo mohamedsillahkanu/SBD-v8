@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School-Based ITN Distribution Survey - Sierra Leone</title>
+    
+    <!-- Favicon - SBD on blue background -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23004080'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='12' font-weight='bold' fill='white' text-anchor='middle'%3ESBD%3C/text%3E%3C/svg%3E">
+    
+    <!-- Oswald Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -30,52 +39,25 @@
                 <div class="partners-label">IMPLEMENTING PARTNERS</div>
                 <div class="partners-grid">
                     <div class="partner-logo-card">
-                        <div class="partner-logo-placeholder">
-                            <svg class="partner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/>
-                            </svg>
+                        <div class="partner-logo-img">
+                            <img src="logo_mohs.png" alt="Ministry of Health" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-placeholder-box">MoHS</div>
                         </div>
-                        <span class="partner-name">MoHS</span>
+                        <span class="partner-name">Ministry of Health</span>
                     </div>
                     <div class="partner-logo-card">
-                        <div class="partner-logo-placeholder">
-                            <svg class="partner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-                            </svg>
+                        <div class="partner-logo-img">
+                            <img src="logo_nmcp.png" alt="NMCP" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-placeholder-box">NMCP</div>
                         </div>
                         <span class="partner-name">NMCP</span>
                     </div>
                     <div class="partner-logo-card">
-                        <div class="partner-logo-placeholder">
-                            <svg class="partner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-                            </svg>
+                        <div class="partner-logo-img">
+                            <img src="logo_pmi.png" alt="PMI Evolve" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-placeholder-box">PMI</div>
                         </div>
-                        <span class="partner-name">WHO</span>
-                    </div>
-                    <div class="partner-logo-card">
-                        <div class="partner-logo-placeholder">
-                            <svg class="partner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <span class="partner-name">Global Fund</span>
-                    </div>
-                    <div class="partner-logo-card">
-                        <div class="partner-logo-placeholder">
-                            <svg class="partner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-                            </svg>
-                        </div>
-                        <span class="partner-name">UNICEF</span>
-                    </div>
-                    <div class="partner-logo-card">
-                        <div class="partner-logo-placeholder">
-                            <svg class="partner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-                            </svg>
-                        </div>
-                        <span class="partner-name">ICF-SL</span>
+                        <span class="partner-name">PMI Evolve</span>
                     </div>
                 </div>
             </div>
@@ -261,12 +243,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="form-label">SCHOOL NAME <span class="required">*</span></label>
-                                <input type="text" class="form-input" name="school_name" id="school_name" required>
-                                <div class="field-error" id="error_school_name">This field is required</div>
-                            </div>
-
-                            <div class="form-group">
                                 <label class="form-label">DISTRICT <span class="required">*</span></label>
                                 <select class="form-select" name="district" id="district" required>
                                     <option value="">Select District...</option>
@@ -304,8 +280,20 @@
 
                             <div class="form-group">
                                 <label class="form-label">COMMUNITY / TOWN / VILLAGE <span class="required">*</span></label>
-                                <input type="text" class="form-input" name="community" id="community" required>
-                                <div class="field-error" id="error_community">This field is required</div>
+                                <select class="form-select" name="community" id="community" required disabled>
+                                    <option value="">Select Community...</option>
+                                </select>
+                                <div class="cascade-count" id="count_community"></div>
+                                <div class="field-error" id="error_community">Please select a community</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">SCHOOL NAME <span class="required">*</span></label>
+                                <select class="form-select" name="school_name" id="school_name" required disabled>
+                                    <option value="">Select School...</option>
+                                </select>
+                                <div class="cascade-count" id="count_school_name"></div>
+                                <div class="field-error" id="error_school_name">Please select a school</div>
                             </div>
 
                             <div class="form-group">
@@ -316,8 +304,9 @@
 
                             <div class="form-group">
                                 <label class="form-label">HEAD TEACHER PHONE <span class="required">*</span></label>
-                                <input type="tel" class="form-input" name="head_teacher_phone" id="head_teacher_phone" required>
-                                <div class="field-error" id="error_head_teacher_phone">This field is required</div>
+                                <input type="tel" class="form-input" name="head_teacher_phone" id="head_teacher_phone" required pattern="[0-9]{9}" maxlength="9">
+                                <div class="field-hint">Enter 9-digit phone number</div>
+                                <div class="field-error" id="error_head_teacher_phone">Please enter a valid 9-digit phone number</div>
                             </div>
 
                             <div class="form-group">
@@ -371,6 +360,17 @@
                                     </svg>
                                     CLASS 1
                                 </div>
+                                <div class="teacher-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Name <span class="required">*</span></label>
+                                        <input type="text" class="form-input" name="c1_teacher_name" id="c1_teacher_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Phone <span class="required">*</span></label>
+                                        <input type="tel" class="form-input phone-field" name="c1_teacher_phone" id="c1_teacher_phone" required pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_c1_teacher_phone">Enter 9-digit number</div>
+                                    </div>
+                                </div>
                                 <div class="class-grid">
                                     <div class="form-group">
                                         <label class="form-label">Number of Boys in Class 1 <span class="required">*</span></label>
@@ -400,6 +400,17 @@
                                         <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
                                     </svg>
                                     CLASS 2
+                                </div>
+                                <div class="teacher-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Name <span class="required">*</span></label>
+                                        <input type="text" class="form-input" name="c2_teacher_name" id="c2_teacher_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Phone <span class="required">*</span></label>
+                                        <input type="tel" class="form-input phone-field" name="c2_teacher_phone" id="c2_teacher_phone" required pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_c2_teacher_phone">Enter 9-digit number</div>
+                                    </div>
                                 </div>
                                 <div class="class-grid">
                                     <div class="form-group">
@@ -431,6 +442,17 @@
                                     </svg>
                                     CLASS 3
                                 </div>
+                                <div class="teacher-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Name <span class="required">*</span></label>
+                                        <input type="text" class="form-input" name="c3_teacher_name" id="c3_teacher_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Phone <span class="required">*</span></label>
+                                        <input type="tel" class="form-input phone-field" name="c3_teacher_phone" id="c3_teacher_phone" required pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_c3_teacher_phone">Enter 9-digit number</div>
+                                    </div>
+                                </div>
                                 <div class="class-grid">
                                     <div class="form-group">
                                         <label class="form-label">Number of Boys in Class 3 <span class="required">*</span></label>
@@ -461,6 +483,17 @@
                                     </svg>
                                     CLASS 4
                                 </div>
+                                <div class="teacher-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Name <span class="required">*</span></label>
+                                        <input type="text" class="form-input" name="c4_teacher_name" id="c4_teacher_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Phone <span class="required">*</span></label>
+                                        <input type="tel" class="form-input phone-field" name="c4_teacher_phone" id="c4_teacher_phone" required pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_c4_teacher_phone">Enter 9-digit number</div>
+                                    </div>
+                                </div>
                                 <div class="class-grid">
                                     <div class="form-group">
                                         <label class="form-label">Number of Boys in Class 4 <span class="required">*</span></label>
@@ -490,6 +523,17 @@
                                         <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
                                     </svg>
                                     CLASS 5
+                                </div>
+                                <div class="teacher-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Name <span class="required">*</span></label>
+                                        <input type="text" class="form-input" name="c5_teacher_name" id="c5_teacher_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Teacher Phone <span class="required">*</span></label>
+                                        <input type="tel" class="form-input phone-field" name="c5_teacher_phone" id="c5_teacher_phone" required pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_c5_teacher_phone">Enter 9-digit number</div>
+                                    </div>
                                 </div>
                                 <div class="class-grid">
                                     <div class="form-group">
@@ -725,36 +769,18 @@
                             </div>
                         </div>
 
-                        <!-- SECTION 5: GPS & SUBMISSION -->
+                        <!-- SECTION 5: TEAM MEMBERS & SUBMISSION -->
                         <div class="form-section" data-section="5">
                             <div class="section-header">
                                 <div class="section-icon">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
                                     </svg>
                                 </div>
                                 <div>
-                                    <h2 class="section-title">SECTION E: RESPONDENT & SUBMISSION</h2>
-                                    <p class="section-description">Your details, GPS location, and final submission</p>
+                                    <h2 class="section-title">SECTION E: TEAM MEMBERS & SUBMISSION</h2>
+                                    <p class="section-description">Survey team details, GPS location, and signatures</p>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label">RESPONDENT NAME <span class="required">*</span></label>
-                                <input type="text" class="form-input" name="respondent_name" id="respondent_name" required>
-                                <div class="field-error" id="error_respondent_name">This field is required</div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label">POSITION / TITLE <span class="required">*</span></label>
-                                <input type="text" class="form-input" name="respondent_position" id="respondent_position" required>
-                                <div class="field-error" id="error_respondent_position">This field is required</div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label">PHONE NUMBER <span class="required">*</span></label>
-                                <input type="tel" class="form-input" name="respondent_phone" id="respondent_phone" required>
-                                <div class="field-error" id="error_respondent_phone">This field is required</div>
                             </div>
 
                             <div class="form-group">
@@ -785,19 +811,108 @@
                                 <input type="hidden" name="gps_acc" id="gps_acc">
                             </div>
 
-                            <div class="form-group">
-                                <label class="form-label">SIGNATURE <span class="required">*</span></label>
-                                <div class="signature-box">
-                                    <canvas id="signatureCanvas"></canvas>
-                                    <button type="button" class="sig-clear-btn" onclick="clearSignature()">
-                                        <svg class="clear-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
-                                        </svg>
-                                        Clear
-                                    </button>
+                            <!-- TEAM MEMBER 1 (Required) -->
+                            <div class="team-member-block required-member">
+                                <div class="team-member-header">
+                                    <svg class="team-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    TEAM MEMBER 1 <span class="required">*</span> (Required)
                                 </div>
-                                <input type="hidden" name="signature" id="signature" required>
-                                <div class="field-error" id="error_signature">Signature is required</div>
+                                <div class="team-member-grid">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name <span class="required">*</span></label>
+                                        <input type="text" class="form-input" name="team1_name" id="team1_name" required>
+                                        <div class="field-error" id="error_team1_name">This field is required</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number <span class="required">*</span></label>
+                                        <input type="tel" class="form-input phone-field" name="team1_phone" id="team1_phone" required pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_team1_phone">Enter valid 9-digit number</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Signature <span class="required">*</span></label>
+                                    <div class="signature-box">
+                                        <canvas id="sig1Canvas"></canvas>
+                                        <button type="button" class="sig-clear-btn" onclick="clearTeamSignature(1)">
+                                            <svg class="clear-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                                            </svg>
+                                            Clear
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="team1_signature" id="team1_signature" required>
+                                    <div class="field-error" id="error_team1_signature">Signature is required</div>
+                                </div>
+                            </div>
+
+                            <!-- TEAM MEMBER 2 (Optional) -->
+                            <div class="team-member-block optional-member">
+                                <div class="team-member-header optional">
+                                    <svg class="team-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    TEAM MEMBER 2 (Optional)
+                                </div>
+                                <div class="team-member-grid">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-input" name="team2_name" id="team2_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-input phone-field" name="team2_phone" id="team2_phone" pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_team2_phone">Enter valid 9-digit number</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Signature</label>
+                                    <div class="signature-box">
+                                        <canvas id="sig2Canvas"></canvas>
+                                        <button type="button" class="sig-clear-btn" onclick="clearTeamSignature(2)">
+                                            <svg class="clear-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                                            </svg>
+                                            Clear
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="team2_signature" id="team2_signature">
+                                </div>
+                            </div>
+
+                            <!-- TEAM MEMBER 3 (Optional) -->
+                            <div class="team-member-block optional-member">
+                                <div class="team-member-header optional">
+                                    <svg class="team-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    TEAM MEMBER 3 (Optional)
+                                </div>
+                                <div class="team-member-grid">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-input" name="team3_name" id="team3_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-input phone-field" name="team3_phone" id="team3_phone" pattern="[0-9]{9}" maxlength="9" placeholder="9 digits">
+                                        <div class="field-error" id="error_team3_phone">Enter valid 9-digit number</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Signature</label>
+                                    <div class="signature-box">
+                                        <canvas id="sig3Canvas"></canvas>
+                                        <button type="button" class="sig-clear-btn" onclick="clearTeamSignature(3)">
+                                            <svg class="clear-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                                            </svg>
+                                            Clear
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="team3_signature" id="team3_signature">
+                                </div>
                             </div>
 
                             <div class="navigation-buttons">
@@ -827,7 +942,7 @@
             <!-- FOOTER -->
             <div class="page-footer">
                 <p class="footer-main">School-Based Distribution of ITNs - Sierra Leone</p>
-                <div class="footer-partners">MoHS | NMCP | WHO | Global Fund | UNICEF | ICF-SL</div>
+                <div class="footer-partners">Ministry of Health | NMCP | PMI Evolve</div>
                 <p class="footer-copy">© 2025 Informatics Consultancy Firm-Sierra Leone (ICF-SL)</p>
             </div>
         </div>
