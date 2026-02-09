@@ -4,35 +4,27 @@ body { background: #f5f5f5; font-family: 'Oswald', 'Segoe UI', Arial, sans-serif
 .main-content.show { display: block; }
 .page-container { max-width: 700px; margin: 0 auto; }
 
-/* PWA INSTALL BANNER */
+/* PWA INSTALL BANNER - ALWAYS VISIBLE */
 .install-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     background: linear-gradient(135deg, #0056a8, #003d7a);
     color: #fff;
     padding: 10px 15px;
-    z-index: 10000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    animation: slideDown 0.3s ease-out;
-}
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .install-content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    max-width: 500px;
-    margin: 0 auto;
 }
 .install-icon {
     width: 24px;
     height: 24px;
-    stroke: #ffc107;
+    stroke: #28a745;
     flex-shrink: 0;
 }
 .install-text {
@@ -42,8 +34,8 @@ body { background: #f5f5f5; font-family: 'Oswald', 'Segoe UI', Arial, sans-serif
     letter-spacing: 0.5px;
 }
 .install-btn {
-    background: #ffc107;
-    color: #000;
+    background: #28a745;
+    color: #fff;
     border: none;
     padding: 8px 20px;
     border-radius: 20px;
@@ -56,23 +48,8 @@ body { background: #f5f5f5; font-family: 'Oswald', 'Segoe UI', Arial, sans-serif
     white-space: nowrap;
 }
 .install-btn:hover {
-    background: #ffcd39;
+    background: #34c759;
     transform: scale(1.05);
-}
-.install-close {
-    background: none;
-    border: none;
-    color: rgba(255,255,255,0.7);
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 5px;
-    line-height: 1;
-}
-.install-close:hover {
-    color: #fff;
-}
-body.install-banner-visible .main-content {
-    padding-top: 50px;
 }
 
 /* HEADER */
@@ -260,30 +237,6 @@ body.install-banner-visible .main-content {
 .remaining-status { font-size: 11px; margin-top: 5px; font-weight: 600; }
 .remaining-status.warning { color: #dc3545; }
 .remaining-status.success { color: #28a745; }
-
-/* ITN RECEIVED BLOCK */
-.itn-received-block { background: #f8f9fa; border: 2px solid #0056a8; border-radius: 10px; margin-bottom: 15px; overflow: hidden; }
-.itn-received-header { background: #0056a8; color: #fff; padding: 12px 15px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1px; }
-.itn-received-content { padding: 15px; }
-.block-icon { width: 20px; height: 20px; stroke: #fff; }
-
-/* CHECKBOX GROUP */
-.checkbox-group { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
-.checkbox-label { display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px 12px; background: #fff; border: 2px solid #dee2e6; border-radius: 6px; transition: all 0.2s; }
-.checkbox-label:hover { border-color: #0056a8; background: #f8f9fa; }
-.checkbox-label input[type="checkbox"] { width: 20px; height: 20px; accent-color: #0056a8; cursor: pointer; }
-.checkbox-label input[type="checkbox"]:checked + .checkbox-text { color: #0056a8; font-weight: 600; }
-.checkbox-text { font-size: 13px; color: #333; }
-
-/* ITN QUANTITY FIELDS */
-.itn-quantity-fields { margin-top: 15px; padding: 15px; background: #e8f1fa; border-radius: 8px; }
-.itn-quantity-fields .form-group { margin-bottom: 12px; }
-.itn-quantity-total { display: flex; align-items: center; gap: 10px; padding: 10px; background: #fff; border-radius: 6px; border: 2px solid #dee2e6; }
-.qty-label { font-size: 12px; font-weight: 600; color: #666; }
-.qty-value { font-size: 18px; font-weight: 700; color: #0056a8; }
-.qty-status { font-size: 11px; font-weight: 600; margin-left: auto; }
-.qty-status.match { color: #28a745; }
-.qty-status.mismatch { color: #dc3545; }
 
 /* GENDER BAR */
 .gender-bar-container { padding: 15px; background: #f8f9fa; border: 2px solid #dee2e6; border-top: none; border-radius: 0 0 8px 8px; }
